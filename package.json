@@ -6,7 +6,7 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "dev": "parcel",
-    "build": "parcel build --public-url /bednarsky-wedding/",
+    "build": "parcel build index.html --public-url /bednarsky-wedding/",
     "deploy": "gh-pages -d dist"
   },
   "repository": {
