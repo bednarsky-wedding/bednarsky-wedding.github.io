@@ -228,6 +228,27 @@
 	</div>		
 </div>
 <div class="md:hidden block">
+	<input id="toggle" type="checkbox"></input>
+
+	<label for="toggle" class="hamburger z-30">
+		<div class="top-bun"></div>
+		<div class="meat"></div>
+		<div class="bottom-bun"></div>
+	</label>
+
+	<div class="nav z-20">
+		<div class="nav-wrapper">
+			<nav>
+				<a class="font-semibold" href="#us-mobile">Это мы</a><br>
+				<a class="font-semibold" href="#wishes-mobile">Пожелания</a><br>
+				<a class="font-semibold" href="#when-mobile">Где и Когда</a><br>
+				<a class="font-semibold" href="#timing-mobile">Тайминг</a>
+				<a class="font-semibold" href="#invite-mobile">Приглашение</a>
+				<a class="font-semibold" href="#contacts-mobile">Контакты</a>
+			</nav>
+			<img class="absolute bottom-0 right-0" src="./assets/flower_menu.png"/>
+		</div>
+	</div>
 	<div class="pt-10 h-auto text-center block-1">
 		<img class="mx-auto logo-mobile mb-24" src="./assets/logo.png" />
 		<p class="text-white font-inspiration text-4xl pb-3">Сергей & Ольга</p>
@@ -242,7 +263,7 @@
 		</div>
 	</div>
 	<div class="px-4">
-		<div class="mt-7 text-left">
+		<div class="mt-7 text-left" id="us-mobile">
 			<p class="font-inspiration text-4xl tracking-2 mb-2">Наша история</p>
 			<div class="pb-4">
 				<p class="font-semibold">Дата нашего знакомства: 21 марта 2017.</p>
@@ -278,7 +299,7 @@
 				<img src="./assets/flower_4.png"/>
 			</div>
 		</div>
-		<div class="pb-20">
+		<div class="pb-20" id="wishes-mobile">
 			<p class="font-inspiration text-4xl mb-2">Наши пожелания</p>
 			<img src="./assets/maids_2.png" class="mb-7"/>
 			<p class="pb-5">Мы не хотим Вас обременять выбором подарка и цветов. Будем благодарны, если Вы внесете частичку Вашей души и материальный вклад в бюджет нашей семьи.</p>
@@ -292,7 +313,7 @@
 				<img src="./assets/color_5.png"/>
 			</div>
 		</div>
-		<div class="relative pb-20">
+		<div class="relative pb-20" id="when-mobile">
 			<p class="font-inspiration text-4xl mb-8 text-left">Где и когда?</p>
 			<img class="flower-6 absolute right-0 -top-10" src="./assets/flower_mobile.png" />
 			<div class="color-secondary when-card--mobile relative mb-4">
@@ -320,7 +341,7 @@
 					&q=Ресторан-курорт+Дубровський">
 			</iframe>
 		</div>
-		<div class="relative pb-16">
+		<div class="relative pb-16" id="timing-mobile">
 			<p class="font-inspiration text-4xl mb-12 text-left">Тайминг</p>
 			<img class="flower-6 absolute -right-4 -top-11" src="./assets/flower_mobile_2.png" />
 			<div class="pb-10 relative">
@@ -328,7 +349,7 @@
 				<p class="font-inspiration text-2xl mb-1">Сбор гостей и фуршет</p>
 				<p class="mb-5">В это время Вы сможете ближе познакомиться с другими гостями, насладиться напитками, а также 
 					закусками во время ожидания нашей пары.</p>
-				<img class="relative z-10" src="./assets/timing_mobile_1.png"/>
+				<img class="relative z-10 mx-auto" src="./assets/timing_mobile_1.png"/>
 				<img class="absolute -bottom-28 right-0 scale-75" src="./assets/arrow_mobile_3.png"/>
 			</div>
 			<div class="pb-10 relative">
@@ -336,35 +357,35 @@
 				<p class="font-inspiration text-2xl mb-1">Церемония</p>
 				<p class="mb-5">Она пройдет в живописном месте 
 					— на берегу реки.</p>
-				<img class="relative z-10" src="./assets/timing_mobile_2.png"/>
+				<img class="relative z-10 mx-auto" src="./assets/timing_mobile_2.png"/>
 				<img class="absolute -bottom-20 right-0 scale-75" src="./assets/arrow_mobile_2.png"/>
 			</div>
 			<div class="pb-10 relative">
 				<p class="font-inspiration text-5xl mb-5">17:00</p>
 				<p class="font-inspiration text-2xl mb-1">Начало торжества</p>
 				<p class="mb-5">Вас ждёт увлекательная программа, которая сможет погрузить в праздничную атмосферу, вкусная авторская кухня, где каждое блюдо было подобрано с любовью. </p>
-				<img class="relative z-10" src="./assets/timing_mobile_3.png"/>
+				<img class="relative z-10 mx-auto" src="./assets/timing_mobile_3.png"/>
 				<img class="absolute -bottom-28 right-0 scale-75" src="./assets/arrow_mobile_3.png"/>
 			</div>
 			<div class="pb-10 relative">
 				<p class="font-inspiration text-5xl mb-5">19:30</p>
 				<p class="font-inspiration text-2xl mb-1">Первый танец</p>
 				<p class="mb-5">Момент, к которому мы долго готовились. </p>
-				<img class="relative z-10" src="./assets/timing_mobile_4.png"/>
+				<img class="relative z-10 mx-auto" src="./assets/timing_mobile_4.png"/>
 				<img class="absolute -bottom-24 right-0 rotate-12" src="./assets/arrow_mobile_2.png"/>
 			</div>
 			<div class="pb-10 relative">
 				<p class="font-inspiration text-5xl mb-5">21:00</p>
 				<p class="font-inspiration text-2xl mb-1">Торт</p>
 				<p class="mb-5">Самая сладкая часть вечера. <br/> (Кроме невесты) </p>
-				<img class="relative z-10" src="./assets/timing_mobile_5.png"/>
+				<img class="relative z-10 mx-auto" src="./assets/timing_mobile_5.png"/>
 				<img class="absolute -bottom-28 right-0 scale-90" src="./assets/arrow_mobile_3.png"/>
 			</div>
 			<div class="relative">
 				<p class="font-inspiration text-5xl mb-5">21:30</p>
 				<p class="font-inspiration text-2xl mb-1">Танцы до упаду</p>
 				<p class="mb-5">Чудесное завершение свадебного дня.</p>
-				<img src="./assets/timing_mobile_6.png"/>
+				<img class="mx-auto" src="./assets/timing_mobile_6.png"/>
 			</div>
 		</div>
 		<div class="relative pb-28">
@@ -375,7 +396,7 @@
 				 Программа торжества составлена таким образом, что и самому маленькому гостю будет чем себя занять.
 				 На территории есть детская площадка, сказочный детский домик и  аниматор с развлекательной программой.</p>
 		</div>
-		<div class="relative pb-24">
+		<div class="relative pb-24" id="invite-mobile">
 			<div class="absolute top-16 z-10 text-center">
 				<p class="font-inspiration text-5xl pb-8">Приглашение</p>
 				<p class="pb-4">Скоро, а точнее <span class="font-inspiration text-xl">27 мая 2022 года,</span> свершится то, чего мы так ждали – наша свадьба!</p>
@@ -383,10 +404,10 @@
 					Поэтому мы приглашаем вас открыть вместе с нами новую страницу книги нашей жизни.</p>
 				<p class="text-base">Если Вы не сможете присутствовать на нашей свадьбе, просьба сообщить нам об этом заранее по телефону: <br/> <strong>(+380)-50-402-27-17</strong></p>
 			</div>
-			<img class="scale-110" src="./assets/invite_mobile.png"/>
+			<img class="scale-110 mx-auto" src="./assets/invite_mobile.png"/>
 		</div>
 	</div>
-	<div class="color-secondary w-full overflow-hidden">
+	<div class="color-secondary w-full overflow-hidden" id="contacts-mobile">
 		<div class="h-full relative text-center">
 			<p class="font-inspiration text-2xl pt-8 pb-4">Контакты:</p>
 			<p class="pb-3 text-lg">+38 (093) 288-06-28</p>
@@ -404,6 +425,14 @@
 </div>
 
 </div>
+<script>
+	const nav = document.querySelector(".nav-wrapper > nav");
+	nav.addEventListener("click", (e) => {
+		if (e.target.tagName === "A") {
+			document.querySelector("#toggle").checked = false;
+		}
+	});
+</script>
 </body>
 
 </html>
