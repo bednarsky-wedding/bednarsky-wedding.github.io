@@ -23,6 +23,12 @@ body {
     font-size: 14px;
 }
 
+@media screen and (max-width: 768px) {
+    body {
+        background-color: white !important;
+    }
+}
+
 .color-secondary {
     background: #F2DEBE;
 }
@@ -105,6 +111,11 @@ body {
     box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.1);
 }
 
+.when-card--mobile {
+    height: 190px;
+    box-shadow: 0px 4px 6px 0px #0000001A;
+}
+
 .arrow-3 {
     left: -168px;
     top: 169px;
@@ -137,7 +148,38 @@ body {
     background-clip: padding-box;
 }
 
+.logo-mobile {
+    filter: invert(1);
+    transform: scale(0.75);
+}
 
+.block-1 {
+    background-image: url("./assets/main_mobile.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+.scale-60 {
+    transform: scale(0.6);
+}
+
+.flower-1 {
+    top: -63px;
+    transform: scale(0.4);
+    left: -63px;
+}
+
+.flower-2 {
+    right: -30px;
+    transform: scale(0.6) rotateY(180deg);
+    top: -2px;
+}
+
+.flower-4 {
+    max-width: 120px;
+    right: -16px;
+    bottom: -50px;
+}
 
 /*
 ! tailwindcss v3.0.0-alpha.1 | MIT License | https://tailwindcss.com
