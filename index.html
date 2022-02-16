@@ -14,7 +14,7 @@
 </head>
 
 <body>
-	<div class="md:block hidden">
+	<div class="md:block hidden" id="desktop">
 	<header>
 		<div class="flex items-center justify-center h-24">
 			<a href="#us" class="font-semibold pr-8 no-underline">Это мы</a>
@@ -26,7 +26,10 @@
 			<a href="#contacts" class="font-semibold no-underline">Контакты</a>
 		</div>
 	</header>
-	<div class="color-secondary relative">
+	<div class="color-secondary relative" id="video-wrapper">
+		<div class="absolute w-full h-full" id="video">
+
+		</div>
 		<div class="first-banner-photo">
 			<img src="./assets/main-photo.jpg" />
 		</div>
@@ -227,7 +230,7 @@
 		</div>
 	</div>		
 </div>
-<div class="md:hidden block">
+<div class="md:hidden block" id="mobile">
 	<input id="toggle" type="checkbox"></input>
 
 	<label for="toggle" class="hamburger z-30">
@@ -249,7 +252,10 @@
 			<img class="absolute bottom-0 right-0" src="./assets/flower_menu.png"/>
 		</div>
 	</div>
-	<div class="pt-10 h-auto text-center block-1">
+	<div class="pt-10 h-auto text-center block-1 relative" id="video-wrapper-mobile">
+		<div class="absolute w-full h-full" id="video-mobile">
+
+		</div>
 		<img class="mx-auto logo-mobile mb-24" src="./assets/logo.png" />
 		<p class="text-white font-inspiration text-4xl pb-3">Сергей & Ольга</p>
 		<p class="text-white pb-72">“Как я тебя люблю? Люблю без <br/> меры. До глубины души, до всех <br/> ее высот, до запредельных <br/> чувственных красот, до недр <br/> бытия, до идеальной сферы.”</p>
@@ -257,7 +263,7 @@
 			<img src="./assets/flower_2.png" class="absolute flower-1"/>
 			<img src="./assets/flower_1.png" class="absolute flower-2"/>
 			<div
-				class="absolute top-0 left-2/4 color-secondary z-10 -translate-x-1/2 -translate-y-1/2 rounded-full play-button">
+				class="absolute top-0 left-2/4 color-secondary z-10 -translate-x-1/2 -translate-y-1/2 rounded-full play-button play-button--mobile">
 				<img src="./assets/play.png"/>
 			</div>
 		</div>
@@ -425,6 +431,80 @@
 </div>
 
 </div>
+<script src="https://player.vimeo.com/api/player.js"></script>
+<script>
+	const isMobile = window.innerWidth < 767;
+	const playButton = document.querySelector(".play-button");
+	const url = new URLSearchParams(window.location.search);
+	const id = url.get("id");
+
+	const ids = [
+		'678266221',
+		'678266098',
+		'678266032',
+		'678265956',
+		'678265878',
+		'678265755',
+		'678265670',
+		'678265569',
+		'678332490',
+		'678332453',
+		'678333701',
+		'678333642',
+		'678333592',
+		'678333532',
+		'678336377',
+		'678336440',
+		'678336475',
+		'678336517',
+		'678336587',
+		'678336640',
+		'678336680',
+		'678337912',
+		'678337955',
+		'678338009',
+		'678338058',
+		'678338096'
+	];
+
+	if (!id || !ids.includes(id)) {
+		const desktop = document.querySelector("#desktop");
+		const mobile = document.querySelector("#mobile");
+		const body = document.querySelector("body");
+		body.removeChild(desktop);
+		body.removeChild(mobile);
+		const text = document.createElement("p");
+		text.className = "font-inspiration text-5xl text-center";
+		text.style = "margin-top: 25%";
+		text.innerText = "Вы уверены, что перешли по правильной ссылке? Это важно, потому что там есть персональное сообщение для вас!";
+		body.appendChild(text);
+	} else {
+		if (!isMobile) {
+			playButton.addEventListener("click", () => {
+				document.querySelector("#video-wrapper").classList.add("video-wrapper--active");
+				const options = {
+					url: `https://player.vimeo.com/video/${id}`
+				};
+
+				Player = new Vimeo.Player('video', options);
+				Player.play();
+			});
+		} else {
+			const playButtonMobile = document.querySelector(".play-button--mobile");
+			playButtonMobile.addEventListener("click", () => {
+				document.querySelector("#video-wrapper-mobile").classList.add("video-wrapper--active");
+				const options = {
+					url: `https://player.vimeo.com/video/${id}`,
+					responsive: true
+				};
+
+				Player = new Vimeo.Player('video-mobile', options);
+				Player.play();
+			});
+		}
+	}
+
+</script>
 <script>
 	const nav = document.querySelector(".nav-wrapper > nav");
 	nav.addEventListener("click", (e) => {
