@@ -802,8 +802,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 100%;
   width: 100%;
 }
-
 #video-mobile {
   top: 35%;
+}
+.arrow-top-banner {
+  right: 7%;
+  bottom: 15%;
+  transform: scale(1.1);
+  filter: invert(1);
+}
+.press-me {
+  bottom: 30%;
+  left: 8%;
 }
 /*# sourceMappingURL=index.3b30eb03.css.map */
